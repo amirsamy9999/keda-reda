@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>كده رضا – مطبخ</title>
+
 <style>
 body {
     margin: 0;
@@ -13,21 +14,24 @@ body {
     text-align: center;
     overflow-x: hidden;
 }
+
 .container {
     padding: 20px 10px;
-    max-width: 480px; /* حد أقصى للعرض للكمبيوتر */
+    max-width: 480px;
     margin: 0 auto;
 }
+
 h1 {
     font-size: 28px;
     margin-bottom: 10px;
 }
+
 p {
     font-size: 16px;
     line-height: 1.5;
 }
 
-/* الشبكة للصور + الأزرار */
+/* الشبكة */
 .gallery-with-buttons {
     display: flex;
     justify-content: center;
@@ -36,38 +40,41 @@ p {
     flex-wrap: wrap;
     margin-bottom: 20px;
 }
+
 .images-left, .images-right {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
+
 .images-left img, .images-right img {
-    width: 80px; /* أصغر للهواتف */
+    width: 80px;
     border-radius: 8px;
 }
 
-/* العمود اليمين بالنسبة للسمكة */
+/* العمود اليمين */
 .images-right {
     position: relative;
 }
 
-/* السمكة الصغيرة جداً */
+/* السمكة */
 .fish {
-    width: 14px; /* أصغر وحجم كيوت جدًا */
+    width: 14px;
     position: absolute;
-    top: 40px; 
+    top: 40px;
     left: 40px;
     transition: all 0.2s ease;
     z-index: 10;
-    transform: scaleX(1); /* اتجاه الصورة الطبيعي */
+    transform: scaleX(1);
 }
 
-/* الأزرار مع تأثير النار */
+/* الأزرار */
 .buttons {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+
 .buttons a {
     display: block;
     padding: 12px;
@@ -83,6 +90,7 @@ p {
     transition: 0.3s;
     margin: 0 auto;
 }
+
 .buttons a::before {
     content: '';
     position: absolute;
@@ -90,14 +98,21 @@ p {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(120deg, rgba(255,69,0,0.7), rgba(255,140,0,0.7), rgba(255,0,0,0.7));
+    background: linear-gradient(
+        120deg,
+        rgba(255,69,0,0.7),
+        rgba(255,140,0,0.7),
+        rgba(255,0,0,0.7)
+    );
     transform: skewX(-20deg);
     transition: 0.5s;
     z-index: 0;
 }
+
 .buttons a:hover::before {
     left: 100%;
 }
+
 .buttons a span {
     position: relative;
     z-index: 1;
@@ -109,21 +124,25 @@ p {
     opacity: 0.8;
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (min-width: 600px) {
     .container {
         max-width: 600px;
     }
+
     .images-left img, .images-right img {
         width: 120px;
     }
+
     .buttons a {
         width: 180px;
         font-size: 18px;
     }
+
     h1 {
         font-size: 32px;
     }
+
     p {
         font-size: 18px;
     }
@@ -132,34 +151,47 @@ p {
 </head>
 
 <body>
+
 <div class="container">
     <h1>🐟 كده رضا – مطبخ</h1>
 
-    <!-- الصور مع الأزرار -->
     <div class="gallery-with-buttons">
-        <!-- العمود الشمال -->
+        <!-- الصور الشمال -->
         <div class="images-left">
             <img src="20251223_155447.jpg" alt="صورة 1">
             <img src="20251223_163450.jpg" alt="صورة 2">
             <img src="20251223_163546.jpg" alt="صورة 3">
         </div>
 
-        <!-- الأزرار في المنتصف -->
+        <!-- الأزرار -->
         <div class="buttons">
-            <a href="tel:01221981307"><span>📞 اتصال مباشر</span></a>
-            <a href="https://chat.whatsapp.com/LHcV9ukdJWc3YxkrYjLFMs" target="_blank"><span>💬 واتساب</span></a>
-            <a href="https://www.facebook.com/share/1Ck5ZPBxKZ/" target="_blank"><span>📘 فيسبوك</span></a>
-            <a href="https://www.facebook.com/messages/t/1Ck5ZPBxKZ" target="_blank"><span>💬 ماسنجر</span></a>
+            <a href="tel:+201221981307">
+                <span>📞 اتصال مباشر</span>
+            </a>
+
+            <a href="https://chat.whatsapp.com/Jh1I1Nuq0mFIzkhk6SguAm" target="_blank">
+                <span>💬 واتساب</span>
+            </a>
+
+            <a href="https://www.facebook.com/share/1BiVp8kkiH/?mibextid=wwXIfr" target="_blank">
+                <span>📘 فيسبوك</span>
+            </a>
+
+            <a href="https://www.facebook.com/messages/t/1BiVp8kkiH" target="_blank">
+                <span>💬 ماسنجر</span>
+            </a>
         </div>
 
-        <!-- العمود اليمين -->
+        <!-- الصور اليمين -->
         <div class="images-right">
             <img src="20251223_163548.jpg" alt="صورة فوق">
-            
-            <!-- السمكة الجديدة -->
-            <img src="cartoon-style-illustration-of-cute-sardine-fish-islated-on-background-png.png" alt="سمكة" class="fish">
-            
-            <!-- الصورة 57 نزلت شوية -->
+
+            <img
+                src="cartoon-style-illustration-of-cute-sardine-fish-islated-on-background-png.png"
+                alt="سمكة"
+                class="fish"
+            >
+
             <img src="20251223_172957.jpg" alt="صورة 57" style="margin-top: 20px;">
         </div>
     </div>
@@ -177,57 +209,52 @@ p {
 </div>
 
 <script>
-// تحرك السمكة بحرية في الصفحة
+// حركة السمكة
 const fish = document.querySelector('.fish');
 let posX = 40;
 let posY = 40;
 let directionX = 1;
 let directionY = 1;
-const speed = 1.5; // سرعة مناسبة للشاشات الصغيرة
+const speed = 1.5;
 
 function moveFish() {
     const maxX = window.innerWidth - fish.offsetWidth;
     const maxY = window.innerHeight - fish.offsetHeight;
-    
+
     posX += directionX * speed;
     posY += directionY * speed;
 
-    if(posX >= maxX || posX <= 0) directionX *= -1;
-    if(posY >= maxY || posY <= 0) directionY *= -1;
+    if (posX >= maxX || posX <= 0) directionX *= -1;
+    if (posY >= maxY || posY <= 0) directionY *= -1;
 
-    // دوران الصورة عكس اتجاه الحركة
-    if(directionX < 0){
-        fish.style.transform = 'scaleX(-1)';
-    } else {
-        fish.style.transform = 'scaleX(1)';
-    }
-
+    fish.style.transform = directionX < 0 ? 'scaleX(-1)' : 'scaleX(1)';
     fish.style.left = posX + 'px';
     fish.style.top = posY + 'px';
-    
+
     requestAnimationFrame(moveFish);
 }
+
 moveFish();
 
-// تهرب السمكة من الماوس بطريقة مضحكة
+// هروب السمكة من الماوس
 document.addEventListener('mousemove', (e) => {
-    const fishRect = fish.getBoundingClientRect();
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
-    
-    const distX = mouseX - (fishRect.left + fishRect.width/2);
-    const distY = mouseY - (fishRect.top + fishRect.height/2);
-    const distance = Math.sqrt(distX*distX + distY*distY);
+    const rect = fish.getBoundingClientRect();
+    const dx = e.clientX - (rect.left + rect.width / 2);
+    const dy = e.clientY - (rect.top + rect.height / 2);
+    const distance = Math.sqrt(dx * dx + dy * dy);
 
-    if(distance < 80){ // مسافة تهرب أصغر للشاشات الصغيرة
-        posX -= distX/2;
-        posY -= distY/2;
+    if (distance < 80) {
+        posX -= dx / 2;
+        posY -= dy / 2;
 
-        // قيود على الحدود
         posX = Math.max(0, Math.min(window.innerWidth - fish.offsetWidth, posX));
         posY = Math.max(0, Math.min(window.innerHeight - fish.offsetHeight, posY));
     }
 });
 </script>
+
 </body>
 </html>
+
+</html>
+
